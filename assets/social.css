@@ -1,0 +1,211 @@
+/**
+ * Gratis Social — share button styles.
+ * No tracking, no external fonts/icons; SVGs are inlined with currentColor.
+ */
+
+.gratis-share {
+	--gratis-share-accent: #1f6feb;
+	--gratis-share-gap: 8px;
+	--gratis-share-btn: 40px;
+	--gratis-share-radius: 8px;
+	--gratis-share-icon: 18px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--gratis-share-gap);
+	margin: 2rem 0;
+}
+
+.gratis-share-label {
+	font-size: 0.85rem;
+	font-weight: 600;
+	opacity: 0.7;
+}
+
+.gratis-share-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--gratis-share-gap);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.gratis-share-item {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.gratis-share-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5em;
+	min-width: var(--gratis-share-btn);
+	height: var(--gratis-share-btn);
+	padding: 0 0.6em;
+	border-radius: var(--gratis-share-radius);
+	border: 1px solid transparent;
+	font-size: var(--gratis-share-icon);
+	line-height: 1;
+	text-decoration: none;
+	transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.gratis-share-btn:hover,
+.gratis-share-btn:focus-visible {
+	transform: translateY(-1px);
+}
+
+.gratis-share-btn:focus-visible {
+	outline: 2px solid var(--gratis-share-accent);
+	outline-offset: 2px;
+}
+
+.gratis-share-icon {
+	flex: 0 0 auto;
+	width: 1em;
+	height: 1em;
+}
+
+/* The visible network name is shown only when there's room (shortcode/inline). */
+.gratis-share-name {
+	font-size: 0.8em;
+	font-weight: 600;
+}
+
+.gratis-share-count {
+	font-size: 0.72em;
+	font-weight: 700;
+	opacity: 0.75;
+}
+
+/* Icon-only by default; opt into labelled buttons with the modifier. */
+.gratis-share:not(.gratis-share--labelled) .gratis-share-name {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* ---- Sizes ---- */
+.gratis-share--small {
+	--gratis-share-btn: 32px;
+	--gratis-share-icon: 15px;
+}
+
+.gratis-share--large {
+	--gratis-share-btn: 48px;
+	--gratis-share-icon: 22px;
+}
+
+/* ---- Brand colours (solid) ---- */
+.gratis-share--color-brand.gratis-share--style-solid .gratis-share-btn {
+	color: #fff;
+}
+
+.gratis-share--color-brand.gratis-share--style-solid .gratis-share-facebook { background: #1877f2; }
+.gratis-share--color-brand.gratis-share--style-solid .gratis-share-x { background: #000; }
+.gratis-share--color-brand.gratis-share--style-solid .gratis-share-linkedin { background: #0a66c2; }
+.gratis-share--color-brand.gratis-share--style-solid .gratis-share-pinterest { background: #e60023; }
+.gratis-share--color-brand.gratis-share--style-solid .gratis-share-email { background: #6b7280; }
+
+.gratis-share--color-brand.gratis-share--style-solid .gratis-share-btn:hover,
+.gratis-share--color-brand.gratis-share--style-solid .gratis-share-btn:focus-visible {
+	filter: brightness(1.1);
+}
+
+/* ---- Brand colours (outline) ---- */
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-btn {
+	background: transparent;
+	border-color: currentColor;
+}
+
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-facebook { color: #1877f2; }
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-x { color: #000; }
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-linkedin { color: #0a66c2; }
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-pinterest { color: #e60023; }
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-email { color: #6b7280; }
+
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-btn:hover,
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-btn:focus-visible {
+	color: #fff;
+}
+
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-facebook:hover { background: #1877f2; }
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-x:hover { background: #000; }
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-linkedin:hover { background: #0a66c2; }
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-pinterest:hover { background: #e60023; }
+.gratis-share--color-brand.gratis-share--style-outline .gratis-share-email:hover { background: #6b7280; }
+
+/* ---- Monochrome (accent) ---- */
+.gratis-share--color-mono.gratis-share--style-solid .gratis-share-btn {
+	background: var(--gratis-share-accent);
+	color: #fff;
+}
+
+.gratis-share--color-mono.gratis-share--style-outline .gratis-share-btn {
+	background: transparent;
+	color: var(--gratis-share-accent);
+	border-color: var(--gratis-share-accent);
+}
+
+.gratis-share--color-mono.gratis-share--style-outline .gratis-share-btn:hover,
+.gratis-share--color-mono.gratis-share--style-outline .gratis-share-btn:focus-visible {
+	background: var(--gratis-share-accent);
+	color: #fff;
+}
+
+/* ---- Floating sidebar ---- */
+.gratis-share--floating {
+	position: fixed;
+	top: 50%;
+	left: 12px;
+	transform: translateY(-50%);
+	z-index: 999;
+	margin: 0;
+	flex-direction: column;
+}
+
+.gratis-share--floating .gratis-share-list {
+	flex-direction: column;
+}
+
+@media (max-width: 782px) {
+	/* Floating sidebar docks to the bottom as a horizontal bar on mobile. */
+	.gratis-share--floating {
+		top: auto;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transform: none;
+		flex-direction: row;
+		justify-content: center;
+		padding: 8px;
+		background: rgba(0, 0, 0, 0.04);
+		backdrop-filter: blur(6px);
+	}
+
+	.gratis-share--floating .gratis-share-list {
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.gratis-share-btn {
+		transition: none;
+	}
+
+	.gratis-share-btn:hover,
+	.gratis-share-btn:focus-visible {
+		transform: none;
+	}
+}
