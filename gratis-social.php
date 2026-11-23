@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Gratis Social
  * Plugin URI: https://github.com/juslintek/gratis-social
- * Description: Social sharing buttons (Facebook, X, LinkedIn, Pinterest, Email) with inline, floating sidebar and shortcode display, optional share counts and styling controls. Lightweight, no tracking, no third-party JS SDK. Replaces Social Warfare ($29/yr).
+ * Description: Social sharing buttons (Facebook, X, LinkedIn, Pinterest, Email) with inline, floating sidebar and shortcode display, optional share counts and styling controls. Lightweight, no tracking, no third-party JS SDK.
  * Version: 1.0.0
  * Requires at least: 6.4
  * Requires PHP: 8.1
