@@ -32,6 +32,5 @@ Gratis Social is a WordPress plugin for social share buttons (X, LinkedIn, Faceb
 
 ## Related
 
-- `/Volumes/Projects/AGENTS.md` — Machine-wide agent guidance
-- `/Volumes/Projects/gratis/AGENTS.md` — Gratis plugin suite guidance
+- `https://gratis.superglobalsdevelopment.com/docs/gratis-social/` — Gratis Social documentation
 - `mcp-for-page-builders` — Visual auditing MCP for page builders
